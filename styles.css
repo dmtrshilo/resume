@@ -1,0 +1,281 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&family=Inter:wght@300;500&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #0a0a0f;
+  color: #e0e0e0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* 🔹 Neon moving grid background */
+.background-grid {
+  position: fixed;
+  inset: 0;
+  background-image:
+    linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px),
+    linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px);
+  background-size: 50px 50px;
+  animation: gridMove 16s linear infinite;
+  z-index: 0;
+}
+
+@keyframes gridMove {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 100px 100px;
+  }
+}
+
+.resume {
+  width: 90%;
+  max-width: 1000px;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* Header */
+.header {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.photo {
+  width: 120px;
+  height: 120px;
+  background-image: url('./poto.png');
+  background-size: cover;
+  background-position-y: -15px;
+  background-repeat: no-repeat;
+  border: 2px solid #00ffff66;
+  border-radius: 12px;
+  box-shadow: 0 0 20px #00ffff33;
+}
+
+.info .name {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.8rem;
+  color: #00ffff;
+}
+
+.info .profession {
+  font-size: 1rem;
+  color: #aaa;
+  margin-top: 5px;
+}
+a,
+a:visited {
+  color: #e0e0e0;
+}
+
+/* About */
+.about {
+  background: rgba(20, 20, 30, 0.7);
+  border: 1px solid #00ffff33;
+  border-radius: 12px;
+  padding: 20px 30px;
+  box-shadow: 0 0 20px #00ffff11;
+}
+
+.about h2 {
+  font-family: 'Orbitron', sans-serif;
+  color: #00ffff;
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+}
+
+/* 🔹 Modules Section */
+.modules {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.modules-title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.4rem;
+  color: #00ffff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+/* Each Module Card */
+.module-card {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  background: rgba(15, 15, 25, 0.85);
+  border: 1px solid #00ffff33;
+  border-radius: 16px;
+  padding: 25px 30px;
+  box-shadow: 0 0 25px #00ffff11;
+  transition: all 0.3s ease;
+  height: 350px;
+}
+
+.module-card:hover {
+  box-shadow: 0 0 25px #00ffff33;
+  border-color: #00ffff66;
+}
+
+.module-left {
+  flex: 1;
+}
+
+.module-name {
+  font-family: 'Orbitron', sans-serif;
+  color: #00ffff;
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+}
+
+.module-desc {
+  color: #ccc;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.module-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.gif-placeholder {
+  min-width: 240px;
+  min-height: 140px;
+  max-width: 470px;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #00ffff33;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #00ffff88;
+  font-size: 0.9rem;
+
+  background-size: contain;
+  background-position: left;
+  background-repeat: no-repeat;
+
+  & video {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.launch-btn {
+  background: transparent;
+  color: #00ffff;
+  border: 1px solid #00ffff66;
+  padding: 8px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: 'Orbitron', sans-serif;
+  transition: all 0.3s ease;
+}
+
+.launch-btn:hover {
+  background: #00ffff22;
+  box-shadow: 0 0 10px #00ffff44;
+}
+
+@media (max-width: 768px) {
+  .module-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .gif-placeholder {
+    width: 100%;
+    height: 180px;
+  }
+
+  .module-right {
+    align-items: stretch;
+  }
+
+  .launch-btn {
+    align-self: flex-start;
+  }
+}
+
+
+/* === Modal Styles === */
+    .modal {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s ease;
+      z-index: 100;
+    }
+
+    .modal.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .modal-content {
+      position: relative;
+      width: 80%;
+      height: 80%;
+      border: 2px solid #00fff7;
+      border-radius: 12px;
+      background: rgba(5, 10, 15, 0.95);
+      box-shadow: 0 0 25px rgba(0, 255, 255, 0.5);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      animation: fadeIn 0.4s ease;
+    }
+
+    .modal iframe {
+      flex: 1;
+      width: 100%;
+      border: none;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: #00fff7;
+      transition: 0.2s;
+    }
+
+    .close-btn:hover {
+      color: #fff;
+      text-shadow: 0 0 8px #00fff7;
+    }
+
+    @keyframes fadeIn {
+      from { transform: scale(0.9); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }

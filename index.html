@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Developer Resume</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript">
+    (function (m, e, t, r, i, k, a) {
+      m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments) };
+      m[i].l = 1 * new Date();
+      for (var j = 0; j < document.scripts.length; j++) { if (document.scripts[j].src === r) { return; } }
+      k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+    })(window, document, 'script', 'https://mc.yandex.ru/metrika/tag.js?id=105339786', 'ym');
+
+    ym(105339786, 'init', { ssr: true, webvisor: true, clickmap: true, ecommerce: "dataLayer", accurateTrackBounce: true, trackLinks: true });
+  </script>
+  <noscript>
+    <div><img src="https://mc.yandex.ru/watch/105339786" style="position:absolute; left:-9999px;" alt="" /></div>
+  </noscript>
+  <!-- /Yandex.Metrika counter -->
+</head>
+
+<body>
+  <div class="background-grid"></div>
+
+  <main class="resume">
+    <header class="header">
+      <div class="photo"></div>
+      <div class="info">
+        <h1 class="name">Дмитрий Шило</h1>
+        <p class="profession">Lead JavaScript Developer</p>
+      </div>
+    </header>
+
+    <section class="about">
+      <h2>Обо мне</h2>
+      <p>
+        Я опытный разработчик с широким технологическим бэкграундом. За годы работы успел поработать с множеством
+        языков, однако последние 7+ лет сосредоточен на JavaScript, TypeScript и Node.js. В своей работе делаю акцент на
+        оптимизации, производительности и модульности приложений. Стремлюсь к чистому, эффективному и поддерживаемому
+        коду.
+      </p>
+      <p>
+        Способен брать ответственность за технические решения и доводить их до внедрения. Умею выстраивать эффективное
+        взаимодействие внутри команды, помогать коллегам расти и сохранять фокус на общих целях проекта.
+      </p>
+    </section>
+
+    <section class="about">
+      <h2>Контакты</h2>
+      <p>
+        email: dmtrshilo@gmail.com
+      </p>
+      <p>
+        tg: <a target="_blank" href="https://t.me/dv_shilo">@dv_shilo</a>
+      </p>
+    </section>
+
+    <section class="modules">
+      <h2 class="modules-title">Проектые модули <span>JS/TS + WebWorkers + selfmade VDOM </span></h2>
+
+      <div class="module-card">
+        <div class="module-left">
+          <h3 class="module-name">Виртуальная таблица</h3>
+          <p class="module-desc">
+            Высокопроизводительная таблица, построенная на VDOM.
+            Способна отрисовать огромное количество данных, без пагинации и подгрузок (на примере 500_000 записей).
+          </p>
+        </div>
+        <div class="module-right">
+          <div class="gif-placeholder">
+            <video autoplay muted loop preload="metadata">
+              <source src="./video/table.webm" type="video/webm">
+            </video>
+          </div>
+        </div>
+      </div>
+
+      <div class="module-card">
+        <div class="module-left">
+          <h3 class="module-name">Css Editor</h3>
+          <p class="module-desc">
+            Кастомный редактор CSS - позволяет блокировать типы селекторов или свойства с возможностью добавлять свои
+            алиасы на селектор.
+            Реализован как валидатор, так и хайлайтер
+          </p>
+        </div>
+        <div class="module-right">
+          <div class="gif-placeholder">
+            <video autoplay muted loop preload="metadata">
+              <source src="./video//css editor.webm" type="video/webm">
+            </video>
+          </div>
+        </div>
+      </div>
+      <div class="module-card">
+        <div class="module-left">
+          <h3 class="module-name">Чат</h3>
+          <p class="module-desc">
+            Чат модуль, обладает всем функционала обычного чата. Построен с применением VDOM. Работает на протоколе
+            WebSocket
+          </p>
+        </div>
+        <div class="module-right">
+          <div class="gif-placeholder">
+            <video autoplay muted loop preload="metadata">
+              <source src="./video/chat.webm" type="video/webm">
+            </video>
+          </div>
+        </div>
+      </div>
+
+      <div class="module-card">
+        <div class="module-left">
+          <h3 class="module-name">Соединительные линии</h3>
+          <p class="module-desc">
+            Позволяет строить линии между объектами с гибкой кастомизацей.
+            3 режима построения, градиенты, тексты
+          </p>
+        </div>
+        <div class="module-right">
+          <div class="gif-placeholder">
+            <video autoplay muted loop preload="metadata">
+              <source src="./video/connector.webm" type="video/webm">
+            </video>
+          </div>
+        </div>
+      </div>
+
+      <div class="module-card">
+        <div class="module-left">
+          <h3 class="module-name">Grid редактор</h3>
+          <p class="module-desc">
+            Создает любую схему с кастомными гэпами.
+            Доступно добавление строк и колонок, объединение ячеек гридов
+          </p>
+        </div>
+        <div class="module-right">
+          <div class="gif-placeholder">
+            <video autoplay muted loop preload="metadata">
+              <source src="./video/grid.webm" type="video/webm">
+            </video>
+          </div>
+        </div>
+      </div>
+
+      <div class="module-card">
+        <div class="module-left">
+          <h3 class="module-name">Masonry</h3>
+          <p class="module-desc">
+            Модуль позволяет распределять объекты внутри контейнера по приницу "кирпичной кладки" с возможностью обхода
+            препятсвий
+          </p>
+        </div>
+        <div class="module-right">
+          <div class="gif-placeholder">
+            <video autoplay muted loop preload="metadata">
+              <source src="./video/masonry.webm" type="video/webm">
+            </video>
+          </div>
+        </div>
+      </div>
+
+      <div class="module-card">
+        <div class="module-left">
+          <h3 class="module-name">Сервис бронирования авто</h3>
+          <p class="module-desc">
+            Большой проект, по бронированию авто, ключевая задача которого - первым забронировать авто для клиента
+            <p>
+              Состоял из множества модулей:
+              <ul style="padding-left:17px">
+              <li>Сервис мониторинга</li>
+              <li>Система обработки GSM</li>
+              <li>Диспетчер управления бронированием</li>
+              <li>Автоматизированный телеграм бот</li>
+              <li>Интеграция с платежным сервисом</li>
+            </ul>
+            </p>
+            
+            На видео показана запись автоматизирированного обхода защиты и бронирования
+          </p>
+        </div>
+        <div class="module-right">
+          <div class="gif-placeholder">
+            <video autoplay muted loop preload="metadata">
+              <source src="./video/cars.webm" type="video/webm">
+            </video>
+          </div>
+        </div>
+      </div>
+
+    </section>
+  </main>
+</body>
+
+</html>
